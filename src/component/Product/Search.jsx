@@ -7,6 +7,7 @@ const Search = () => {
   const [keyword, setKeyword] = useState("");
 
   const navigate=useNavigate()
+  
   const searchSubmitHandler = (e) => {
     e.preventDefault();
     if (keyword.trim()) {

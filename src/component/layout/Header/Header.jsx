@@ -46,15 +46,11 @@ const Header = () => {
       gap:"10vw"
     }}>
 
-    <Link to="/">
-      <h1>Home</h1>
-    </Link>
-    <Link to="/products">
-      <h1>Products</h1>
-    </Link>
+    <Link to="/"><h1>Home</h1></Link>
+    <Link to="/products"><h1>Products</h1></Link>
+    <Link to="login"><h1>Login/SignUp</h1></Link>
+    <Link to="cart"><h1>Cart</h1></Link>
     </div>
-  
-    
   )
 }
 

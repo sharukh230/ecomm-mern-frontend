@@ -1,6 +1,6 @@
 import React from 'react'
 import {Link} from "react-router-dom"
-import ReactStars from 'react-rating-stars-component'
+import {Rating} from "@mui/material"
 
 const ProductCard = ({product}) => {
     const options = {
@@ -13,7 +13,7 @@ const ProductCard = ({product}) => {
         <img src={product.images[0].url} alt={product.name}/>
         <p>{product.name}</p>
         <div>
-            <ReactStars {...options} /> <span>({product.numOfRevives} Reviews)</span>
+            <Rating {...options} /> <span>({product.numOfRevives} Reviews)</span>
         </div>
         <span>₹{product.price}</span>
     </Link>

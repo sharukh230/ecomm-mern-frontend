@@ -8,15 +8,15 @@ import { useDispatch, useSelector } from "react-redux"
 import Loader from "../layout/Loader/Loader"
 
 const Home = () => {
-  const { loading,  products } = useSelector((state) => state.products)
+  const { loading, error, products } = useSelector((state) => state.products)
 
   const dispatch = useDispatch();
   useEffect(() => {
-    // if(error){
-    //   dispatch(clearErrors)
-    // }
+    if(error){
+      dispatch(clearErrors)
+    }
     dispatch(getProduct())
-  }, [dispatch])
+  }, [dispatch,error])
   return (
     <Fragment>
       {loading ? (<Loader/>) :
